@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        thead{text-align: center;}
+        .img_c {
+            width: 100px;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .para {
+            text-align: center;
+        }
+        .t_cntr{text-align: center;}
+        .no-border{border-right:none}
+        .no-border_r{border-left: none;}
+        .no-border{border-color: #fff;
+        border-bottom: 1px solid rgb(224, 239, 252);}
+    </style>
+</head>
+
+<body class="container-fluid">
+    <table class="table">
+       
+    </table>
+    <table class="table table-bordered">
+        <thead class="no-border">
+            <tr>
+                <td colspan="2" rowspan="4" class="img_c "><img height="120px" src="data:image/png;base64,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" alt=""></td>
+                <td colspan="4" rowspan="4" class=" ps-4 text-centre">
+                    <div class="text-centre">
+                        <h2 class="heading">Sai Travels</h2>
+                    </div>
+                    <div>
+                        <p class="para text-centre">Address : N0.244, Near Movie Land Theater, S C Road, Bangalor
+                            e, Bengaluru (Bangalore) Urban, Karnataka, 560009..<br>
+                            Mobile No : GST :</p>
+    
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="2">Date: 24-05-2022</th>
+                <th class="t_cntr" colspan="2">LR No: <b>BAN/1</b></th>
+                <th colspan="2" class="t_cntr">Consignor Copy</th>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="4">
+                    <div><b>From :</b>BANGLORE KLP</div>
+                    <div><b>Consignor :</b>MAIBU</div>
+                    <div><b>Mobile No:</b>9535841681</div>
+                    <div><b>Address:</b>BANGLORE ARC</div>
+                </td>
+                <td colspan="2" rowspan="4">
+                    <div><b>TO:</b>JAMKHANDI</div>
+                    <div><b>Consignee:</b>LALASAB</div>
+                    <div><b>Mobile No : 7676791437</b></div>
+                    <div><b>Address:</b></div>
+                </td>
+                <td class="no-border">Freight type:</td>
+                <th class="no-border_r">TO PAY</th>
+            </tr>
+            <tr>
+                <td>Freight</td>
+                <td class="text-end">1</td>
+            </tr>
+            <tr>
+                <td>Hamali</td>
+                <td class="text-end">1</td>
+            </tr>
+            <tr>
+                <td><b>Total</b></td>
+                <td class="text-end">2</td>
+            </tr>
+            <tr>
+                <th class="t_cntr">Qty.</th>
+                <th class="t_cntr">DESCRIPTION</th>
+                <td>Invoice No.</td>
+                <td>&nbsp;</td>
+                <td colspan="2" rowspan="6">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="t_cntr no-border" rowspan="4">1</td>
+                <td class="t_cntr no-border_r" rowspan="4">Bags</td>
+                <td>Value</td>
+                <td class="text-end">0</td>
+            </tr>
+            <tr>
+                <td>Actual Weight</td>
+                <td class="text-end">5</td>
+            </tr>
+            <tr>
+                <td>Charged Weight</td>
+                <td class="text-end">5</td>
+            </tr>
+            <tr>
+                <td colspan="2">Delivery At: Godown</td>
+            </tr>
+            <tr>
+                <td colspan="2">Remark :</td>
+                <th colspan="2">G.S.T Paid By : Not Applicable</th>
+            </tr>
+            <tr>
+                <td colspan="6">Goods booked At Owner's risk</td>
+            </tr>
+            <tr>
+                <td colspan="6">Ewaybill No:</td>
+            </tr>
+            <tr>
+                <td colspan="3" rowspan="2">Terms and Conditions <br>
+                    1.The Company shall not be responsible for any Sales
+                    Tax/Customs liability.<br>
+                    2.Loss of parcel,Damage,leakage and misplacement.<br>
+                    3.No claim will be entertained at any manner.<br>
+                    4.Luggage contents are booked under SAID TO CONTAIN
+                    basis only.</td>
+                <td colspan="3">Sai Travels</td>
+            </tr>
+            <tr><td colspan="3" class="text-end" >Auth Sign</td></tr>
+        </tbody>
+    </table>
+    <table class="table">
+        <thead class="text-centre">
+            <tr><th colspan="6"><h1>Sai Travels</h1></th></tr>
+            <tr><td colspan="6">Address : N0.244, Near Movie Land Theater, S C Road, Bangalore, Bengaluru (Bang
+
+                alore) Urban, Karnataka, 560009..<br>
+                Mobile No :   GST :</td></tr>
+        </thead>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th colspan="2">Date: 24-05-2022</th>
+                    <th class="t_cntr" colspan="2">LR No: <b>BAN/1</b></th>
+                    <th colspan="2" class="t_cntr">Truck Copy</th>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="4">
+                        <div><b>From :</b>BANGLORE KLP</div>
+                        <div><b>Consignor :</b>MAIBU</div>
+                        <div><b>Mobile No:</b>9535841681</div>
+                        <div><b>Address:</b>BANGLORE ARC</div>
+                    </td>
+                    <td colspan="2" rowspan="4">
+                        <div><b>TO:</b>JAMKHANDI</div>
+                        <div><b>Consignee:</b>LALASAB</div>
+                        <div><b>Mobile No : 7676791437</b></div>
+                        <div><b>Address:</b></div>
+                    </td>
+                    <td class="no-border">Freight type:</td>
+                    <th class="no-border_r">TO PAY</th>
+                </tr>
+                <tr>
+                    <td>Freight</td>
+                    <td class="text-end">1</td>
+                </tr>
+                <tr>
+                    <td>Hamali</td>
+                    <td class="text-end">1</td>
+                </tr>
+                <tr>
+                    <td><b>Total</b></td>
+                    <td class="text-end">2</td>
+                </tr>
+                <tr>
+                    <th class="t_cntr">Qty.</th>
+                    <th class="t_cntr">DESCRIPTION</th>
+                    <td>Invoice No.</td>
+                    <td>&nbsp;</td>
+                    <td colspan="2" rowspan="6">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="t_cntr no-border" rowspan="4">1</td>
+                    <td class="t_cntr no-border_r" rowspan="4">Bags</td>
+                    <td>Value</td>
+                    <td class="text-end">0</td>
+                </tr>
+                <tr>
+                    <td>Actual Weight</td>
+                    <td class="text-end">5</td>
+                </tr>
+                <tr>
+                    <td>Charged Weight</td>
+                    <td class="text-end">5</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Delivery At: Godown</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Remark :</td>
+                    <th colspan="2">G.S.T Paid By : Not Applicable</th>
+                </tr>
+                <tr>
+                    <td colspan="6">Goods booked At Owner's risk</td>
+                </tr>
+                <tr>
+                    <td colspan="6">Ewaybill No:</td>
+                </tr>
+                <tr>
+                    <td colspan="3" rowspan="2">Terms and Conditions <br>
+                        1.The Company shall not be responsible for any Sales
+                        Tax/Customs liability.<br>
+                        2.Loss of parcel,Damage,leakage and misplacement.<br>
+                        3.No claim will be entertained at any manner.<br>
+                        4.Luggage contents are booked under SAID TO CONTAIN
+                        basis only.</td>
+                    <td colspan="3" class="border_b">Sai Travels</td>
+                </tr>
+                <tr><td colspan="3" class="text-end border_t">Auth Sign</td></tr>
+            </tbody>
+        </table>
+    </table>
+</body>
+
+</html>
